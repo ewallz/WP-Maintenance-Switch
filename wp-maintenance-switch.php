@@ -1,15 +1,15 @@
 <?php
 /*
  * Plugin Name: WP Maintenance Switch
- * Plugin URI: https://wordpress.org/plugins/wp-maintenance-switch/
+ * Plugin URI: https://github.com/ewallz/WP-Maintenance-Switch/
  * Description: A light-weight tool to turn on maintenance mode with just one click.
- * Version: 1.0.1
- * Author: Mitch
- * Author URI: https://profiles.wordpress.org/lowest
+ * Version: 1.1
+ * Author: GPL
+ * Author URI: https://github.com/ewallz/WP-Maintenance-Switch/
  * Text Domain: wpmaintenanceswitch
  * Domain Path:
  * Network:
- * License: GPL-2.0+
+ * License: GPL-3.0
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -218,8 +218,3 @@ function wpmaintenanceswitch_maintenancepage() {
 	}
 }
 add_action('init', 'wpmaintenanceswitch_maintenancepage');
-
-function wpmaintenanceswitch_links( $link ) {
-	return array_merge( $link, array('<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2VYPRGME8QELC" target="_blank" rel="noopener noreferrer">' . __('Donate') . '</a>') );
-}
-add_filter( 'plugin_action_links_' . plugin_basename( WPMS_FILE ), 'wpmaintenanceswitch_links');
